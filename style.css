@@ -1,76 +1,74 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
+.curved-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(145deg, #FFBCF2 25%, #d6adfd 40%, #aee5f8 55%);
+  clip-path: path("M 0 0 L 0 340 C 200 300, 400 600, 720 430 C 1000 300, 1250 350, 6000 500 L 1550 0 Z");
+  z-index: -1;
+}
 
-    .curved-background {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100vh;
-      background: linear-gradient(145deg, #FFBCF2 25%, #d6adfd 40%, #aee5f8 55%);
-      clip-path: path("M 0 0 L 0 340 C 200 300, 400 600, 720 430 C 1000 300, 1250 350, 6000 500 L 1550 0 Z");
-      z-index: -1;
-    }
-
-
-    .header {
+.header {
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 20px 40px 0 20px; /* top right bottom left */
+  padding: 20px 40px 0 20px;
   position: relative;
   z-index: 1;
-  margin-left: 0; /* removes the 185px push */
+  margin-left: 0;
 }
 
 .header img {
   width: 50px;
   height: 50px;
-  margin-top: -10px; /* optional: tweak for alignment with text */
+  margin-top: -10px;
 }
 
 #title {
   font-size: 25px;
   color: black;
   font-weight: bold;
-  margin: 0; /* removes any default spacing */
+  margin: 0;
   margin-top: -10px;
 }
 
+#paragraph {
+  color: rgb(124, 52, 241);
+  font-size: 60px;
+  font-weight: bold;
+  margin-top: 30px;
+  padding: 0 20px;
+  position: relative;
+  z-index: 1;
+  margin-left: 100px;
+}
 
-    #paragraph {
-      color: rgb(124, 52, 241);
-      font-size: 60px;
-      font-weight: bold;
-      margin-top: 30px;
-      padding: 0 20px;
-      position: relative;
-      z-index: 1;
-       margin-left: 100px;
-    }
+#shift {
+  color: rgb(124, 52, 241);
+  font-size: 60px;
+  font-weight: bold;
+  position: relative;
+  z-index: 1;
+  margin-left: 190px;
+  margin-top: -70px;
+}
 
-    #shift{
-       color: rgb(124, 52, 241);
-      font-size: 60px;
-      font-weight: bold;
-      position: relative;
-      z-index: 1;
-      margin-left: 190px;
-     margin-top: -70px;
-    }
-
-    .centered-text {
+.centered-text {
   text-align: center;
   font-size: 20px;
   font-weight: 600;
   color: rgb(124, 52, 241);
   margin-top: -50px;
-  margin-left:-510px;
+  margin-left: -510px;
 }
+
 .button-clss {
   color: white;
   font-size: 20px;
@@ -81,12 +79,13 @@
   padding: 15px 26px;
   margin-top: 30px;
   cursor: pointer;
- margin-left: 310px;
+  margin-left: 310px;
 }
+
 .bottom-circles {
   position: absolute;
   bottom: 65px;
-  left: 45%;
+  left: 50%;
   transform: translateX(-50%);
   display: flex;
   gap: 175px;
@@ -96,22 +95,21 @@
 .circle {
   width: 80px;
   height: 80px;
-  background-color: rgb(142, 72, 255);
   border: 2px solid rgb(124, 52, 241);
   border-radius: 50%;
-
-  display: flex;              /* enables flexbox */
-  align-items: center;        /* vertical centering */
-  justify-content: center;    /* horizontal centering */
-
-  color: white;               /* text color */
-  font-size: 14px;            /* adjust as needed */
-  font-weight: bold;          /* bold text */
-  text-align: center;         /* center-align multiline text */
-  padding: 5px;               /* optional: adds breathing room */
-  box-sizing: border-box;     /* ensures padding doesn’t break layout */
+  overflow: hidden;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
 }
 
+.circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 .side-image {
   position: absolute;
@@ -122,6 +120,7 @@
   height: auto;
   z-index: 1;
 }
+
 @media screen and (max-width: 768px) {
   .content {
     flex-direction: column;
@@ -144,6 +143,15 @@
   .feature {
     width: 60px;
     height: 60px;
-    font-size:0.7rem;
-}
+    font-size: 0.7rem;
+  }
+
+  .bottom-circles {
+    gap: 40px;
+  }
+
+  .circle {
+    width: 60px;
+    height: 60px;
+  }
 }
