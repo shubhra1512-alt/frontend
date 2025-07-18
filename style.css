@@ -1,149 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
+body, html {
+  width: 100%;
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  overflow-x: hidden;
+}
 
-    .curved-background {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100vh;
-      background: linear-gradient(145deg, #FFBCF2 25%, #d6adfd 40%, #aee5f8 55%);
-      clip-path: path("M 0 0 L 0 340 C 200 300, 400 600, 720 430 C 1000 300, 1250 350, 6000 500 L 1550 0 Z");
-      z-index: -1;
-    }
+.curved-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(160deg, #FFBCF2 25%, #d6adfd 40%, #aee5f8 55%);
+  clip-path: path("M 0 0 L 0 400 C 250 300, 400 600, 720 430 C 1000 300, 1250 350, 6000 500 L 1550 0 Z");
+  z-index: -1;
+}
 
+.container {
+  padding: 30px;
+}
 
-    .header {
+/* Header */
+.header {
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 20px 40px 0 20px; /* top right bottom left */
-  position: relative;
-  z-index: 1;
-  margin-left: 0; /* removes the 185px push */
+  gap: 10px;
+  margin-bottom: 40px;
 }
 
-.header img {
-  width: 50px;
-  height: 50px;
-  margin-top: -10px; /* optional: tweak for alignment with text */
+.logo {
+  width: 40px;
+  height: 40px;
 }
 
-#title {
-  font-size: 25px;
-  color: black;
+.title {
+  font-size: 22px;
   font-weight: bold;
-  margin: 0; /* removes any default spacing */
-  margin-top: -10px;
 }
 
-
-    #paragraph {
-      color: rgb(124, 52, 241);
-      font-size: 60px;
-      font-weight: bold;
-      margin-top: 30px;
-      padding: 0 20px;
-      position: relative;
-      z-index: 1;
-       margin-left: 100px;
-    }
-
-    #shift{
-       color: rgb(124, 52, 241);
-      font-size: 60px;
-      font-weight: bold;
-      position: relative;
-      z-index: 1;
-      margin-left: 190px;
-     margin-top: -70px;
-    }
-
-    .centered-text {
-  text-align: center;
-  font-size: 20px;
-  font-weight: 600;
-  color: rgb(124, 52, 241);
-  margin-top: -50px;
-  margin-left:-510px;
-}
-.button-clss {
-  color: white;
-  font-size: 20px;
-  font-weight: bold;
-  background-color: rgb(124, 52, 241);
-  border-radius: 5px;
-  border: none;
-  padding: 15px 26px;
-  margin-top: 30px;
-  cursor: pointer;
- margin-left: 310px;
-}
-.bottom-circles {
-  position: absolute;
-  bottom: 65px;
-  left: 45%;
-  transform: translateX(-50%);
+/* Main Content Layout */
+.main-content {
   display: flex;
-  gap: 175px;
-  z-index: 6;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.circle {
+/* Left Section */
+.left {
+  flex: 1;
+  min-width: 300px;
+}
+
+/* Grouped heading + paragraph */
+.text-block {
+  margin-bottom: 30px;
+  margin-left: 48px;
+  margin-top: -200px; /* Pulls the block upward */
+}
+
+.text-block h1 {
+  font-size: 2.5rem;
+  color: #8d42e8;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.text-block p {
+  font-size: 1rem;
+  color: #5f3dc4;
+  line-height: 1.5;
+}
+
+.start-button {
+  background-color: #a472f5;
+  color: white;
+  padding: 14px 28px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 12px;
+  transition: background 0.3s ease;
+  margin-left: 48px;
+}
+
+.start-button:hover {
+  background-color: #8d5df3;
+}
+
+/* Right Section */
+.right {
+  flex: 1;
+  text-align: center;
+  min-width: 300px;
+  margin-top: 20px;
+}
+
+.illustration {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Feature Circles */
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 50px;
+  flex-wrap: wrap;
+}
+
+.feature {
+  background: #caa8f9;
+  color: white;
+  font-weight: bold;
   width: 80px;
   height: 80px;
-  background-color: rgb(142, 72, 255);
-  border: 2px solid rgb(124, 52, 241);
   border-radius: 50%;
-
-  display: flex;              /* enables flexbox */
-  align-items: center;        /* vertical centering */
-  justify-content: center;    /* horizontal centering */
-
-  color: white;               /* text color */
-  font-size: 14px;            /* adjust as needed */
-  font-weight: bold;          /* bold text */
-  text-align: center;         /* center-align multiline text */
-  padding: 5px;               /* optional: adds breathing room */
-  box-sizing: border-box;     /* ensures padding doesn’t break layout */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
-
-.side-image {
-  position: absolute;
-  right: 60px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 550px;
-  height: auto;
-  z-index: 1;
+.feature.empty {
+  background: transparent;
 }
-@media screen and (max-width: 768px) {
-  .content {
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main-content {
     flex-direction: column;
-    align-items: center;
     text-align: center;
   }
 
-  .text-section h2 {
-    font-size: 6vw;
+  .text-block {
+    margin-left: 0;
+    margin-top: -40px;
   }
 
-  .text-section p {
-    font-size: 4vw;
+  .text-block h1 {
+    font-size: 2rem;
   }
 
   .start-button {
     font-size: 1rem;
+    padding: 12px 24px;
+    margin-left: 0;
   }
 
   .feature {
-    width: 60px;
-    height: 60px;
-    font-size:0.7rem;
-}
+    width: 70px;
+    height: 70px;
+  }
 }
