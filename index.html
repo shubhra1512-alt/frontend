@@ -7,41 +7,113 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
- 
   <div class="container">
-    <!-- Top Logo -->
     <div class="header">
       <img src="logo-removebg-preview.png" alt="logo" class="logo">
-      <span class="title">DOCUMENT FINDER</span>
+      <span class="title">DOCFINDER</span>
     </div>
 
-    <!-- Main Content -->
     <div class="main-content">
-      <!-- Text Section -->
       <div class="text-section">
         <div class="text-block">
           <h1>Struggling to find<br>that one file?</h1>
           <p>
-            Our DocFinder searches across folders<br>
-            and formats instantly. Organized, efficient,<br>
-            and built to save your time.
+            Our DocFinder searches across folders
+            and formats instantly.<br> Organized, efficient,
+            and built to save your time.<br>Smart filters
+             help you locate files in seconds.<br>
+          Never lose track of your important documents again.
           </p>
         </div>
         <a href="#" class="start-button">Start Now →</a>
       </div>
+<div id="termsModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <h2 class="terms-heading">📜 Terms & Conditions</h2>
+    <p>
+      By using Document Finder, you allow the app to scan your files to help you find documents more easily.<br>
+      Your data remains private and is not shared or stored externally without your consent. Please ensure that the documents you use with the app are your own or that you have permission to access them. Misuse of the application for illegal or unauthorized purposes is strictly prohibited.
+    </p>
 
-      <!-- Image Section -->
+    <!-- ✅ Checkbox & Proceed Button -->
+    <div class="checkbox-container">
+      <input type="checkbox" id="acceptCheckbox" />
+      <label for="acceptCheckbox">I accept the terms and conditions</label>
+    </div>
+
+    <button onclick="closePopup()" class="proceed-btn">Proceed</button>
+  </div>
+</div>
+
+
       <div class="image-section">
         <img src="image-removebg-preview.png" alt="illustration" class="illustration">
       </div>
     </div>
+  </div>
+  <!-- Scanning Homepage -->
+<div id="homepage" class="homepage" style="display: none;">
+  <div class="homepage-left">
+    
+     <div class="header">
+      <img src="logo-removebg-preview.png" alt="logo" class="logo">
+      <span class="title">DOCFINDER</span>
+    </div>
 
-    <!-- Bottom Icons -->
-    <div class="features">
-      <div class="feature">Auto<br>Scan</div>
-      <div class="feature">Secure</div>
-      <div class="feature">Local</div>
+    <div class="scan-box">
+      <h2 style="display: inline;">🔍 Scanning your files...</>
+      <p>Preparing your document space...<br>
+      Scanning in progress — hang on a moment<br>before you search.</p>
     </div>
   </div>
+
+  <div class="homepage-right">
+    <div class="folder-list">
+  <div class="folder-card">📁 <strong>Documents</strong><span>0 Found</span></div>
+  <div class="folder-card">📁 <strong>Downloads</strong><span>0 Found</span></div>
+  <div class="folder-card">📁 <strong>Desktop</strong><span>0 Found</span></div>
+  <div class="folder-card">📁 <strong>Music</strong><span>0 Found</span></div>
+  <div class="folder-card">📁 <strong>Pictures</strong><span>0 Found</span></div>
+  <div class="folder-card">📁 <strong>Videos</strong><span>0 Found</span></div>
+  <div class="folder-card">📁 <strong>Work</strong><span>0 Found</span></div>
+</div>
+
+    <div class="final-card">
+      <img src="ChatGPT_Image_Jul_19__2025__01_50_54_PM-removebg-preview.png" alt="folder" class="final-folder"/>
+      
+      <p><strong>You’re All Set with Document Finder!</strong><br>
+      Effortless search and get documents at a glance.</p>
+    </div>
+  </div>
+</div>
+ <!-- ABOUT US Button -->
+<button class="about-btn" id="aboutBtn">ABOUT US</button>
+
+<div id="aboutModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>📄 About Us</h2>
+    <p>
+Welcome to DocFinder! 🧠<br>
+Your intelligent assistant for finding documents—fast, accurate, and effortless.
+
+With DocFinder, you can:<br>
+
+🔍 Instantly locate important files using smart search<br>
+
+⚡ Organize and scan documents in just seconds<br>
+
+🖥️ Enjoy a smooth, user-friendly experience on any device<br>
+
+Whether you're a student, professional, or team member,
+DocFinder saves your time and boosts your productivity.<br>
+
+Let your documents find you.💡</p>
+  </div>
+</div>
+
+
+  <script src="script.js"></script>
 </body>
 </html>
