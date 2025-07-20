@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   console.log("Script loaded");
 
-  // TERMS & CONDITIONS MODAL --------------------------
+  // TERMS MODAL
   const termsModal = document.getElementById("termsModal");
   const startBtn = document.querySelector(".start-button");
   const closeTermsBtn = document.querySelector(".close-btn");
@@ -23,14 +23,13 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // ABOUT US MODAL -----------------------------------
+  // ABOUT US MODAL
   const aboutModal = document.getElementById("aboutModal");
   const aboutBtn = document.getElementById("aboutBtn");
   const aboutClose = aboutModal?.querySelector(".close");
 
   if (aboutBtn && aboutModal && aboutClose) {
     aboutBtn.addEventListener("click", function () {
-      console.log("About Us button clicked");
       aboutModal.style.display = "block";
     });
 
@@ -48,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-// FUNCTION TO CLOSE T&C MODAL AND PROCEED ------------------------
+// FUNCTION TO CLOSE T&C MODAL AND SHOW HOMEPAGE
 function closePopup() {
   const checkbox = document.getElementById("acceptCheckbox");
   if (!checkbox.checked) {
@@ -56,18 +55,15 @@ function closePopup() {
     return;
   }
 
-  // Hide modal and landing content
   document.getElementById("termsModal").style.display = "none";
+
   const mainContent = document.querySelector(".main-content");
   if (mainContent) {
     mainContent.style.display = "none";
   }
 
-  // Show the scanning homepage
   const homepage = document.getElementById("homepage");
   if (homepage) {
     homepage.style.display = "flex";
   }
 }
-
-

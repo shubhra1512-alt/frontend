@@ -393,3 +393,122 @@ body, html {
 .close:hover {
   color: #000;
 }
+
+/* 🔧 RESPONSIVENESS — added only at the end */
+
+@media (max-width: 1200px) {
+  .about-btn {
+    left: auto;
+    right: 20px;
+    bottom: auto;
+    top: 20px;
+  }
+
+  .text-block {
+    margin-left: 0;
+    margin-top: -100px;
+  }
+
+  .start-button {
+    margin-left: 0;
+  }
+
+  .scan-box {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  .main-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .text-block {
+    margin-top: -80px;
+    margin-left: 0;
+  }
+
+  .start-button {
+    margin-left: 0;
+    top: 30px;
+  }
+
+  .right {
+    margin-top: 40px;
+    right: 0;
+  }
+
+  .homepage {
+    flex-direction: column;
+    padding: 20px;
+    top: 0;
+    height: auto;
+  }
+
+  .homepage-left {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .homepage-right {
+    width: 100%;
+    padding: 20px;
+    margin-top: 20px;
+  }
+
+  .about-btn {
+    position: static;
+    align-self: center;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .text-block h1 {
+    font-size: 2rem;
+  }
+
+  .text-block p {
+    font-size: 1rem;
+  }
+
+  .start-button {
+    font-size: 1rem;
+    padding: 12px 24px;
+  }
+
+  .scan-box h2 {
+    font-size: 1.5rem;
+  }
+
+  .scan-box p {
+    font-size: 0.9rem;
+  }
+
+  .modal-content {
+    padding: 20px;
+  }
+
+  .folder-card,
+  .final-card {
+    font-size: 0.85rem;
+  }
+
+  .header {
+    flex-direction: row;
+    gap: 8px;
+  }
+
+  .logo {
+    width: 25px;
+    height: 25px;
+  }
+
+  .title {
+    font-size: 18px;
+  }
+}
+
