@@ -1,0 +1,292 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff;
+  overflow-x: hidden;
+}
+
+.container {
+  padding: 20px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 32px;
+  height: 32px;
+}
+
+.search-bar {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  background: #f3f3f3;
+  padding: 5px;
+  border-radius: 10px;
+  max-width: 500px;
+}
+
+.search-bar input {
+  flex: 1;
+  border: none;
+  padding: 8px;
+  border-radius: 10px;
+  background: transparent;
+  outline: none;
+}
+
+.search-bar button {
+  background: #c49fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.about-btn {
+  padding: 10px 16px;
+  background: #eee;
+  color: #8c50d1;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-right: 80px;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.results-area {
+  flex: 4;
+  max-height: none;
+  overflow-y: visible;
+  padding-right: 10px;
+}
+
+.results-frame {
+  background: linear-gradient(150deg, #ffb7f4, #b4eaff);
+  border-radius: 20px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+  /*max-height: 100%;*/
+}
+
+.doc-card {
+  background: white;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.doc-card h3 {
+  margin: 0 0 8px;
+}
+
+.doc-card .modified {
+  color: #8c50d1;
+  margin-bottom: 4px;
+}
+
+.open-btn {
+  background: #c49fff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  margin-top: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.homepage-right {
+  flex: 1;
+  padding-left: 20px;
+  min-width: 250px;
+}
+
+.folder-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 40px;
+  max-height: 250px;
+  overflow-y: auto;
+  padding-right: 6px;
+}
+
+.folder-list::-webkit-scrollbar {
+  width: 6px;
+}
+.folder-list::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 10px;
+}
+.folder-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.folder-card {
+  background: #f8f8f8;
+  border-radius: 12px;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.95rem;
+}
+.folder heading {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #8c50d1;
+  padding-left: 10px;
+}
+.found {
+  color: #8c50d1;
+  font-size: 14px;
+}
+
+/* 🌸 FINAL MSG SECTION with overlap */
+.final-msg-wrapper {
+  position: relative;
+  margin-top: 60px;
+  text-align: center;
+}
+
+.final-msg-wrapper img {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: -70px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.final-msg {
+  background: #ffe5f1;
+  padding: 90px 25px 50px 25px;
+  border-radius: 20px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  min-height: 100px;
+}
+
+.final-msg p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #333;
+}
+/* 📱 Responsive Styles */
+@media (max-width: 1024px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .search-bar {
+    width: 100%;
+    max-width: none;
+  }
+
+  main {
+    flex-direction: column;
+  }
+
+  .results-area {
+    flex: none;
+    width: 100%;
+    max-height: unset;
+    padding-right: 0;
+  }
+
+  .results-frame {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+
+  .homepage-right {
+    flex: none;
+    width: 100%;
+    padding-left: 0;
+    margin-top: 30px;
+  }
+
+  .folder-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-height: unset;
+    overflow: visible;
+    gap: 12px;
+  }
+
+  .folder-card {
+    flex: 1 1 45%;
+    min-width: 140px;
+    justify-content: space-between;
+  }
+
+  .final-msg-wrapper img {
+    width: 150px;
+    height: 150px;
+    top: -50px;
+  }
+
+  .final-msg {
+    padding: 70px 20px 40px 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .results-frame {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+
+  .search-bar input,
+  .search-bar button {
+    font-size: 14px;
+  }
+
+  .about-btn {
+    font-size: 14px;
+    padding: 8px 14px;
+  }
+
+  .doc-card {
+    padding: 12px;
+  }
+
+  .doc-card h3 {
+    font-size: 16px;
+  }
+
+  .open-btn {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+
+  .final-msg p {
+    font-size: 13px;
+  }
+}
